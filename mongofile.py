@@ -13,11 +13,12 @@ from pyspark import SparkContext
 import numpy as np
 
 #client = MongoClient('mongodb://54.89.111.43:27017/')
-client = pymongo.MongoClient('54.89.111.43:27017', username='usrname', password='password', \
+client = pymongo.MongoClient('54.89.111.43:27017', username='team29admin', password='pwonastickynote', \
                       authSource='admin', authMechanism='SCRAM-SHA-1')
 
 db = client.irs990 
 
+print(db)
 col = db.returns
 
 data = col.find({"return.ReturnHeader990x.schedule_parts.returnheader990x_part_i.RtrnHdr_TxYr":"2017",
